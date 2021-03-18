@@ -1,0 +1,14 @@
+<h3> Adding new player to the bowling game</h3>
+<%= form_for :player, url: players_path do |f| %>
+  <p>
+    Gamer name<br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Score<br>
+    <%=f.text_field(:score, {:class => 'form-control', value:0}) %>
+  </p>
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

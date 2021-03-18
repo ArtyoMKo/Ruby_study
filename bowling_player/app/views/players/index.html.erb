@@ -1,0 +1,12 @@
+<h1> Players and scores</h1>
+<p> Bowling one session -> 10 step</p>
+<div>
+  <%= button_to "Simulate", { :controller => "players", :action => "simulate"} %>
+  <%= button_to "Reset", { :controller => "players", :action => "reset"} %>
+</div>
+<% @player.each do |player| %>
+  <div class="well">
+    <h3><%= player.name %></h3>
+    <p>ID <%= player.id %> with <%= player.score %> score ,winner ? <%=player.winner %> </p>
+  </div>
+<% end %>
